@@ -52,7 +52,6 @@ def predict():
     if frame is None:
         return jsonify({"error": "Invalid image"}), 400
 
-    # 🔥 WAJIB resize (biar cepat)
     frame = cv2.resize(frame, (640, 480))
 
     rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
