@@ -8,7 +8,7 @@ from facenet_pytorch import MTCNN, InceptionResnetV1
 # ================= CONFIG =================
 MODEL_PATH = "facenet_fast_model_gpu.pkl"
 LABEL_PATH = "label_encoder_gpu.pkl"
-CONF_THRESHOLD = 0.7
+CONF_THRESHOLD = 0.6
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"[INFO] Device: {DEVICE}")
@@ -24,7 +24,7 @@ mtcnn = MTCNN(
     image_size=160,
     margin=20,
     min_face_size=40,
-    thresholds=[0.5, 0.6, 0.6],
+    thresholds=[0.8, 0.9, 0.9],
     factor=0.709,
     keep_all=True,
     device="cpu"  # stabil
