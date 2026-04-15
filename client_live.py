@@ -4,7 +4,7 @@ import time
 
 # ================= CONFIG =================
 SERVER_URL = "http://192.168.0.109:5000/predict" #sesuaikan
-INTERVAL = 0.2  # 5 FPS
+INTERVAL = 0.1  # 10 FPS
 
 # ================= CAMERA =================
 cap = cv2.VideoCapture(0)
